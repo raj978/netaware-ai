@@ -6,6 +6,9 @@
   @import "base";
 }
 
+img {
+	margin: 20px;
+}
 
 @layer components {
   @import "components";

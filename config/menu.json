@@ -1,70 +1,16 @@
 {
   "main": [
-    {
-      "name": "Home",
-      "url": "/"
-    },
-    {
-      "name": "Blog",
-      "url": "/blogs"
-    },
-    {
-      "name": "Pricing",
-      "url": "/pricing"
-    },
-    {
-      "name": "Contact",
-      "url": "/contact"
-    },
-    {
-      "name": "FAQ",
-      "url": "/faq"
-    }
   ],
   "footer": [
     {
-      "name": "Company",
+      "name": "References",
       "menu": [
         {
-          "text": "Pricing",
-          "url": "/pricing"
-        },
-        {
-          "text": "Quick Start",
-          "url": "#"
-        }
-      ]
-    },
-    {
-      "name": "Product",
-      "menu": [
-        {
-          "text": "Features",
+          "text": "Used Clerk for the Sign-in feature.",
           "url": "#"
         },
         {
-          "text": "Platform",
-          "url": "#"
-        },
-        {
-          "text": "Pricing",
-          "url": "/pricing"
-        }
-      ]
-    },
-    {
-      "name": "Support",
-      "menu": [
-        {
-          "text": "FAQ",
-          "url": "/faq"
-        },
-        {
-          "text": "Privacy Policy",
-          "url": "#"
-        },
-        {
-          "text": "Terms & Conditions",
+          "text": "Utilized model from paper \"AI/ML for 5G-Energy Consumption Modelling by ITU AI/ML in 5G Challenge\"",
           "url": "#"
         }
       ]

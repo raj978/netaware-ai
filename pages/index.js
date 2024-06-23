@@ -47,7 +47,7 @@ const Home = ({ frontmatter }) => {
       </section>
 
       {/* Features */}
-      <section className="section bg-theme-light">
+      {/* <section className="section bg-theme-light">
         <div className="container">
           <div className="text-center">
             <h2>{markdownify(feature.title)}</h2>
@@ -75,7 +75,7 @@ const Home = ({ frontmatter }) => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* services */}
       {services.map((service, index) => {
@@ -117,21 +117,6 @@ const Home = ({ frontmatter }) => {
                 >
                   <h2 className="font-bold leading-[40px]">{service?.title}</h2>
                   <p className="mt-4 mb-2">{service?.content}</p>
-                  {service.button.enable && (
-                    <Link
-                      href={service?.button.link}
-                      className="cta-link inline-flex items-center text-primary"
-                    >
-                      {service?.button.label}
-                      <Image
-                        className="ml-1"
-                        src="/images/arrow-right.svg"
-                        width={18}
-                        height={14}
-                        alt="arrow"
-                      />
-                    </Link>
-                  )}
                 </div>
               </div>
             </div>
@@ -140,7 +125,7 @@ const Home = ({ frontmatter }) => {
       })}
 
       {/* workflow */}
-      <section className="section pb-0">
+      {/* <section className="section pb-0">
         <div className="mb-8 text-center">
           {markdownify(
             workflow.title,
@@ -155,7 +140,7 @@ const Home = ({ frontmatter }) => {
           width={1920}
           height={296}
         />
-      </section>
+      </section> */}
 
       {/* Cta */}
       <Cta cta={call_to_action} />

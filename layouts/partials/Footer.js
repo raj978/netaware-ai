@@ -31,17 +31,16 @@ const Footer = () => {
             );
           })}
           {/* social icons */}
-          <div className="md-12 sm:col-6 lg:col-3">
+          <div className="mx-auto sm:col-6 mt-12">
             <Link href="/" aria-label="Bigspring">
               <Image
                 src={config.site.logo}
-                width={config.site.logo_width}
-                height={config.site.logo_height}
+                width={config.site.logo_width*2}
+                height={config.site.logo_height*2}
+				align="right"
                 alt=""
               />
             </Link>
-            {markdownify(footer_content, "p", "mt-3 mb-6")}
-            <Social source={social} className="social-icons mb-8" />
           </div>
         </div>
         {/* copyright */}
