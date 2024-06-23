@@ -10,7 +10,7 @@ const Header = () => {
   //router
   const router = useRouter();
 
-  // distructuring the main menu from menu object
+  // destructuring the main menu from menu object
   const { main } = menu;
 
   // states declaration
@@ -53,7 +53,7 @@ const Header = () => {
         {/* Menu */}
         <div
           id="nav-menu"
-		  className={`order-3 md:order-1 md:flex md:items-center ${navOpen ? "max-h-[1000px]" : "max-h-0"} md:max-h-full`}
+          className={`order-3 md:order-1 md:flex md:items-center ${navOpen ? "max-h-[1000px]" : "max-h-0"} md:max-h-full`}
         >
           <ul className="navbar-nav block w-full md:flex md:w-auto lg:space-x-2">
             {main.map((menu, i) => (
@@ -89,32 +89,25 @@ const Header = () => {
                 )}
               </React.Fragment>
             ))}
-            {enable && (
-              <li className="md:hidden">
-                <Link className="btn btn-primary z-0 py-[14px]" href={link} rel="">
-                  {label}
-                </Link>
-              </li>
-            )}
           </ul>
         </div>
 
-{/* Sign In/Sign Out */}
+        {/* Sign In/Sign Out */}
         <div className="order-1 ml-auto flex items-center space-x-4 md:ml-0 md:order-2">
           <SignedIn>
             <UserButton />
+            {enable && (
+              <Link className="btn btn-primary z-0 py-[14px]" href={link} rel="">
+                {label}
+              </Link>
+            )}
           </SignedIn>
           <SignedOut>
             <SignInButton mode="modal" redirectUrl="/protected">
               <span className="nav-link">Sign in</span>
             </SignInButton>
           </SignedOut>
-          {enable && (
-            <Link className="btn btn-primary z-0 py-[14px] hidden md:block" href={link} rel="">
-              {label}
-            </Link>
-        )}
-		</div>
+        </div>
       </nav>
     </header>
   );
