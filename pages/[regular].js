@@ -1,7 +1,6 @@
 import NotFound from "@layouts/404";
 import Base from "@layouts/Baseof";
 import Default from "@layouts/Default";
-
 import Dashboard from "@layouts/Dash";
 import Pricing from "@layouts/Pricing";
 import { getRegularPage, getSinglePage } from "@lib/contentParser";
@@ -27,7 +26,7 @@ const RegularPages = ({ data }) => {
         <Contact data={data} />
       ) : layout === "pricing" ? (
         <Pricing data={data} />
-      ) : layout === "dashboard" ? (
+      ) : layout === "Dash" ? (
         <Dashboard data={data} />
       ) : (
         <Default data={data} />

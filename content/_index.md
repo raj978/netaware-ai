@@ -5,7 +5,7 @@ banner:
   image: /images/animation.gif
   button:
     label: "Contact Us"
-    link: "/contact"
+    link: "/base_url"
 
 # feature
 # feature: 

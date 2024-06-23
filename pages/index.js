@@ -45,7 +45,7 @@ const Home = ({ frontmatter }) => {
                   href={banner.button.link}
                   rel={banner.button.rel}
                 >
-                  {banner.button.label}
+                {banner.button.label}
                 </Link>
               )}
               <motion.div
