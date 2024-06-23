@@ -8,7 +8,7 @@ import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import { getListPage } from "../lib/contentParser";
-import NavBar from '../pages/NavBar';
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
 
 const Home = ({ frontmatter }) => {
   const { banner, feature, services, workflow, call_to_action } = frontmatter;
@@ -16,7 +16,7 @@ const Home = ({ frontmatter }) => {
 
   return (
     <Base title={title}>
-      <NavBar />
+      {/* <NavBar /> */}
       {/* Banner */}
       <section className="section pb-[50px]">
         <div className="container">

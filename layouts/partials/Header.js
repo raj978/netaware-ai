@@ -4,6 +4,7 @@ import menu from "@config/menu.json";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
 
 const Header = () => {
   //router
@@ -21,7 +22,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <nav className="navbar container">
+      <nav className="navbar container flex items-center justify-between">
         {/* logo */}
         <div className="order-0">
           <Logo src={logo} />
@@ -52,9 +53,7 @@ const Header = () => {
         {/* Menu */}
         <div
           id="nav-menu"
-          className={`order-3 md:order-1 ${
-            navOpen ? "max-h-[1000px]" : "max-h-0"
-          }`}
+		  className={`order-3 md:order-1 md:flex md:items-center ${navOpen ? "max-h-[1000px]" : "max-h-0"} md:max-h-full`}
         >
           <ul className="navbar-nav block w-full md:flex md:w-auto lg:space-x-2">
             {main.map((menu, i) => (
@@ -70,10 +69,7 @@ const Header = () => {
                     <ul className="nav-dropdown-list hidden group-hover:block md:invisible md:absolute md:block md:opacity-0 md:group-hover:visible md:group-hover:opacity-100">
                       {menu.children.map((child, i) => (
                         <li className="nav-dropdown-item" key={`children-${i}`}>
-                          <Link
-                            href={child.url}
-                            className="nav-dropdown-link block"
-                          >
+                          <Link href={child.url} className="nav-dropdown-link block">
                             {child.name}
                           </Link>
                         </li>
@@ -85,9 +81,7 @@ const Header = () => {
                     <Link
                       href={menu.url}
                       onClick={() => setNavOpen(false)}
-                      className={`nav-link block ${
-                        router.asPath === menu.url ? "nav-link-active" : ""
-                      }`}
+                      className={`nav-link block ${router.asPath === menu.url ? "nav-link-active" : ""}`}
                     >
                       {menu.name}
                     </Link>
@@ -97,24 +91,30 @@ const Header = () => {
             ))}
             {enable && (
               <li className="md:hidden">
-                <Link
-                  className="btn btn-primary z-0 py-[14px]"
-                  href={link}
-                  rel=""
-                >
+                <Link className="btn btn-primary z-0 py-[14px]" href={link} rel="">
                   {label}
                 </Link>
               </li>
             )}
           </ul>
         </div>
-        {enable && (
-          <div className="d-flex order-1 ml-auto hidden min-w-[200px] items-center justify-end md:ml-0 md:flex md:order-2">
-            <Link className="btn btn-primary z-0 py-[14px]" href={link} rel="">
+
+{/* Sign In/Sign Out */}
+        <div className="order-1 ml-auto flex items-center space-x-4 md:ml-0 md:order-2">
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+          <SignedOut>
+            <SignInButton mode="modal" redirectUrl="/protected">
+              <span className="nav-link">Sign in</span>
+            </SignInButton>
+          </SignedOut>
+          {enable && (
+            <Link className="btn btn-primary z-0 py-[14px] hidden md:block" href={link} rel="">
               {label}
             </Link>
-          </div>
         )}
+		</div>
       </nav>
     </header>
   );
