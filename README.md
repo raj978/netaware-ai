@@ -1,7 +1,7 @@
 <h1 align=center>NetAwareAI</h1>
 <p align=center>NetAware AI is a realtime network data monitoring and management solution that improves base station electricity consumption.</p>
 
-
+<img src="lib/public/images/webpic.png"/>
 
 
 <!-- installation -->
