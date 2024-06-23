@@ -9,9 +9,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import { getListPage } from "../lib/contentParser";
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
+import { motion } from "framer-motion";
 
 const Home = ({ frontmatter }) => {
-  const { banner, feature, services, workflow, call_to_action } = frontmatter;
+  const { banner, services, call_to_action } = frontmatter;
   const { title } = config.site;
 
   return (
@@ -21,61 +22,50 @@ const Home = ({ frontmatter }) => {
       <section className="section pb-[50px]">
         <div className="container">
           <div className="row text-center">
-            <div className="mx-auto lg:col-10">
-              <h1 className="font-primary font-bold">{banner.title}</h1>
-              <p className="mt-4">{markdownify(banner.content)}</p>
+            <div className="mx-auto lg:col-8">
+              <motion.h1
+                className="font-primary font-bold"
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                {banner.title}
+              </motion.h1>
+              <motion.p
+                className="mt-4"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+              >
+                {markdownify(banner.content)}
+              </motion.p>
               {banner.button.enable && (
                 <Link
-                  className="btn btn-primary mt-4"
+                  className="btn btn-primary"
                   href={banner.button.link}
                   rel={banner.button.rel}
                 >
                   {banner.button.label}
                 </Link>
               )}
-              <Image
+              <motion.div
                 className="mx-auto mt-12"
-                src={banner.image}
-                width={750}
-                height={390}
-                alt="banner image"
-                priority
-              />
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1, duration: 0.5 }}
+              >
+                <Image
+                  src={banner.image}
+                  width={750}
+                  height={390}
+                  alt="banner image"
+                  priority
+                />
+              </motion.div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Features */}
-      {/* <section className="section bg-theme-light">
-        <div className="container">
-          <div className="text-center">
-            <h2>{markdownify(feature.title)}</h2>
-          </div>
-          <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
-            {feature.features.map((item, i) => (
-              <div
-                className="feature-card rounded-xl bg-white p-5 pb-8 text-center"
-                key={`feature-${i}`}
-              >
-                {item.icon && (
-                  <Image
-                    className="mx-auto"
-                    src={item.icon}
-                    width={30}
-                    height={30}
-                    alt=""
-                  />
-                )}
-                <div className="mt-4">
-                  {markdownify(item.name, "h3", "h5")}
-                  <p className="mt-3">{item.content}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
 
       {/* services */}
       {services.map((service, index) => {
@@ -88,7 +78,13 @@ const Home = ({ frontmatter }) => {
             <div className="container">
               <div className="items-center gap-8 md:grid md:grid-cols-2">
                 {/* Carousel */}
-                <div className={`service-carousel ${!isOdd && "md:order-2"}`}>
+                <motion.div
+                  className={`service-carousel ${!isOdd && "md:order-2"}`}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                >
                   <Swiper
                     modules={[Autoplay, Pagination]}
                     pagination={
@@ -107,40 +103,26 @@ const Home = ({ frontmatter }) => {
                       </SwiperSlide>
                     ))}
                   </Swiper>
-                </div>
+                </motion.div>
 
                 {/* Content */}
-                <div
+                <motion.div
                   className={`service-content mt-5 md:mt-0 ${
                     !isOdd && "md:order-1"
                   }`}
+                  initial={{ opacity: 0, x: isOdd ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
                 >
                   <h2 className="font-bold leading-[40px]">{service?.title}</h2>
                   <p className="mt-4 mb-2">{service?.content}</p>
-                </div>
+                </motion.div>
               </div>
             </div>
           </section>
         );
       })}
-
-      {/* workflow */}
-      {/* <section className="section pb-0">
-        <div className="mb-8 text-center">
-          {markdownify(
-            workflow.title,
-            "h2",
-            "mx-auto max-w-[400px] font-bold leading-[44px]"
-          )}
-          {markdownify(workflow.description, "p", "mt-3")}
-        </div>
-        <Image
-          src={workflow.image}
-          alt="workflow image"
-          width={1920}
-          height={296}
-        />
-      </section> */}
 
       {/* Cta */}
       <Cta cta={call_to_action} />

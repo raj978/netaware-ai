@@ -1,6 +1,6 @@
 ---
 banner:
-  title: Welcome to NetAwareAI!
+  title: Welcome to NetAwareAI
   content: The AI tool for your network usage optimization needs!
   image: /images/robots.gif
   button:
