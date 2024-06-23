@@ -58,12 +58,6 @@ After downloading the template, you have some prerequisites to install. Then you
 After successfully installing those dependencies, open this template with any IDE [[VS Code](https://code.visualstudio.com/) recommended], and then open the internal terminal of IDM [vs code shortcut <code>ctrl/cmd+\`</code>]
 
 * Install dependencies
-## Setup ENV Variable: 
-- Clerk (get API key from Clerk Installation)
-```
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_ZW5hYmxlZC10dXJ0bGUtMjYuY2xlcmsuYWNjb3VudHMuZGV2JA
-CLERK_SECRET_KEY=sk_test_*************************
-```
 
 ```
 npm install
