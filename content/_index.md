@@ -2,7 +2,7 @@
 banner:
   title: Welcome to NetAwareAI
   content: The AI tool for your network usage optimization needs!
-  image: /images/robots.gif
+  image: /images/animation.gif
   button:
     label: "Contact Us"
     link: "/contact"

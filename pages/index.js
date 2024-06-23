@@ -22,7 +22,7 @@ const Home = ({ frontmatter }) => {
       <section className="section pb-[50px]">
         <div className="container">
           <div className="row text-center">
-            <div className="mx-auto lg:col-8">
+            <div className="mx-auto">
               <motion.h1
                 className="font-primary font-bold"
                 initial={{ opacity: 0, y: -50 }}
@@ -49,7 +49,7 @@ const Home = ({ frontmatter }) => {
                 </Link>
               )}
               <motion.div
-                className="mx-auto mt-12"
+                className="mx-auto sm:col-6"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 0.5 }}
