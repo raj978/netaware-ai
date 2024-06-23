@@ -31,22 +31,19 @@ const Footer = () => {
             );
           })}
           {/* social icons */}
-          <div className="mx-auto sm:col-6 mt-12">
-            <Link href="/" aria-label="Bigspring">
+          <div className="mx-auto sm:col-6">
+            <Link href="/" aria-label="NetAwareAI Logo">
               <Image
                 src={config.site.logo}
                 width={config.site.logo_width*2}
                 height={config.site.logo_height*2}
-				align="right"
+				align="center"
                 alt=""
               />
             </Link>
           </div>
         </div>
         {/* copyright */}
-        <div className="border-t border-border py-6">
-          {markdownify(copyright, "p", "text-sm text-center")}
-        </div>
       </div>
     </footer>
   );

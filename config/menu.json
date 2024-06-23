@@ -2,18 +2,5 @@
   "main": [
   ],
   "footer": [
-    {
-      "name": "References",
-      "menu": [
-        {
-          "text": "Used Clerk for the Sign-in feature.",
-          "url": "#"
-        },
-        {
-          "text": "Utilized model from paper \"AI/ML for 5G-Energy Consumption Modelling by ITU AI/ML in 5G Challenge\"",
-          "url": "#"
-        }
-      ]
-    }
   ]
 }
