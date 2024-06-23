@@ -42,11 +42,12 @@ Our tech stack includes:
 - Next.js 14 for the WebApp hosted on vercel
 - Clerk for a seamless and drop-in OAuth Provider
 - AWS Kinesis, Glue and SageMaker for ML Pipeline and Real time Data Ingestion
-- AWS Bedrock with Calude Anthropic FM fine-tuned to offer network insights
+- AWS Bedrock with Claude Anthropic FM fine-tuned to offer network insights
 - AWS Web API Gateway interacting with AWS Lambda to allow for initiating MLOps
 - AWS S3 Bucket for centralized data storage of Elastic Container Registry instance os Sage Maker, Real Time Ingestion from Kinesis and instance of AWS Bedrock.
 
 ## Challenges we ran into
+Some challenges we faced along the way was figuring out all the AWS Policies and Configurations for each of the AWS Services/technologies. 
 - AWS Policies and Configurations for each of the AWS Services/technologies.
 - Limitation to stay within the AWS EcoSystem to allow for real-time data ingestion from telecom providers that can be supported using insights from Bedrock.
 
