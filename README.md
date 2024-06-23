@@ -37,20 +37,18 @@ npm run build
 
 The inspiration for your project NetAwareAI stems from the climate change problem. The demand for 5G networks around the world have significantly increased due to the increase in data traffic due to the proliferation of connected devices around the world. With more data being managed results more energy being used to manage the data. We acknowledged the need for a strategic optimization algorithm that can help efficiently allocate energy to certain network nodes in order to make sure sufficient energy is present for effective data processing. We also aim to educate the upcoming generation about the importance of the energy consumption problem and it's impact on climate change. 
 
-## How we built it
-1. Front End
-- Next.js (React.js): The basis for our web application, which is hosted by Vercel. We used next.js to streamline our website design and maximized the ability of React to create a webpage that can display an ergonomic dashboard that displays numerous charts and statistics through Chart.js, an open-source charting library. 
-- Amazon API Gateway: We used the Amazon API Gateway to connect the Frontend (Next.js web app) to the Backend (Amazon S3) REST API, which exchanges messages between the two through JSON.
-- AWS Lambda: 
-- Amazon CloudWatch:
-
-2. Back End
-- Amazon Kinesis:
-- Amazon S3:
-- AWS Glue:
-- AWS SageMaker:
+## How we built it?
+Our tech stack includes:
+- Next.js 14 for the WebApp hosted on vercel
+- Clerk for a seamless and drop-in OAuth Provider
+- AWS Kinesis, Glue and SageMaker for ML Pipeline and Real time Data Ingestion
+- AWS Bedrock with Calude Anthropic FM fine-tuned to offer network insights
+- AWS Web API Gateway interacting with AWS Lambda to allow for initiating MLOps
+- AWS S3 Bucket for centralized data storage of Elastic Container Registry instance os Sage Maker, Real Time Ingestion from Kinesis and instance of AWS Bedrock.
 
 ## Challenges we ran into
+- AWS Policies and Configurations for each of the AWS Services/technologies.
+- Limitation to stay within the AWS EcoSystem to allow for real-time data ingestion from telecom providers that can be supported using insights from Bedrock.
 
 ## Accomplishments that we're proud of
 
