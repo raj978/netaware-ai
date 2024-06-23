@@ -1,9 +1,7 @@
 <h1 align=center>NetAware AI</h1> 
-<p align=center>NetAware AI is a </p>
+<p align=center>NetAware AI is a realtime network data monitoring and management solution that improves base station electricity consumption.</p>
 <h2 align="center"> <a target="_blank" href="https://bigspring-light-nextjs.vercel.app/" rel="nofollow">👀Demo</a> | <a  target="_blank" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fbigspring-light-nextjs.vercel.app%2F&form_factor=desktop">Page Speed (100%)🚀</a>
 </h2>
-
-
 
 <p align=center>
   <a href="https://github.com/vercel/next.js/releases/tag/v13.0.6" alt="Contributors">
@@ -21,43 +19,17 @@
 
 ![bigspring-light](https://demo.gethugothemes.com/thumbnails/bigspring-light.png)
 
-## 🔑Key Features
 
-- 📄 9+ Pre-Designed Pages
-- ✨ Simple and Minimal
-- 📱 Fully Responsive
-- 🚀 Google Page Speed score 100! (Desktop)
-- 📊 Google Analytics support
-- 🗂️ Caching enabled
-- ✉️ Supports Contact Form
-- 🌍 SEO Friendly
-
-## 📄 9+ Pre-Designed Pages
-
-- 🏠 Home Page
-- 📚 Blog Page
-- 📝 Blog Single Page
-- 📞 Contact Page
-- 📄 Features Page
-- ❓ FAQ Page
-- 💰 Pricing Page
-- 🔒 Privacy Policy Page
-- 🔒 Terms and Condition Page
 
 <!-- installation -->
 ## ⚙️Installation
 
-After downloading the template, you have some prerequisites to install. Then you can run it on your localhost. You can view the package.json file to see which scripts are included.
-
-### 🔧Install prerequisites (once for a machine)
-
-* **Node Installation:** [Install node js](https://nodejs.org/en/download/) [Recommended LTS version]
-
-### 🖥️Local setup
-
-After successfully installing those dependencies, open this template with any IDE [[VS Code](https://code.visualstudio.com/) recommended], and then open the internal terminal of IDM [vs code shortcut <code>ctrl/cmd+\`</code>]
-
-* Install dependencies
+## Setup ENV Variable: 
+- Clerk (get API key from Clerk Installation)
+```
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_ZW5hYmxlZC10dXJ0bGUtMjYuY2xlcmsuYWNjb3VudHMuZGV2JA
+CLERK_SECRET_KEY=sk_test_*************************
+```
 
 ```
 npm install
