@@ -33,3 +33,11 @@ After finishing all the customization, you can create a production build by runn
 ```
 npm run build
 ```
+
+## Inspiration
+
+The inspiration for your project NetAwareAI stems from the climate change problem. The demand for 5G networks around the world have significantly increased due to the increase in data traffic due to the proliferation of connected devices around the world. With more data being managed results more energy being used to manage the data. We acknowledged the need for a strategic optimization algorithm that can help efficiently allocate energy to certain network nodes in order to make sure sufficient energy is present for effective data processing. We also aim to educate the upcoming generation about the importance of the energy consumption problem and it's impact on climate change. 
+
+## What it Does
+
+NetAwareAI helps provide metrics and statistics that can be used to predict the amount of energy that could be used at the given time. It provides a set of charts that help the user determine the energy consumption of their base station relative to other base stations around them. NetAwareAI also provides recommendations about tips to conserve energies using generative AI to help educate users about their network consumption techniques.
