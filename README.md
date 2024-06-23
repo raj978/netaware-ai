@@ -41,3 +41,7 @@ The inspiration for your project NetAwareAI stems from the climate change proble
 ## What it Does
 
 NetAwareAI helps provide metrics and statistics that can be used to predict the amount of energy that could be used at the given time. It provides a set of charts that help the user determine the energy consumption of their base station relative to other base stations around them. NetAwareAI also provides recommendations about tips to conserve energies using generative AI to help educate users about their network consumption techniques.
+
+We built our application usingthe following frameworks and tools:
+- Next.js (React.js)
+- 
