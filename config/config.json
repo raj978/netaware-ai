@@ -9,12 +9,6 @@
     "logo_text": "NetAwareAI Logo"
   },
 
-  "nav_button": {
-    "enable": true,
-    "label": "Get Started",
-    "link": "/Dash"
-  },
-
   "params": {
     "contact_form_action": "",
     "tag_manager_id": "",
