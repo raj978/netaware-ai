@@ -60,3 +60,5 @@ Some challenges we faced along the way was figuring out all the AWS Policies and
 - 
 
 ## What's next for NetAware AI
+
+Model from : [Github]{https://github.com/ITU-AI-ML-in-5G-Challenge/5G-Energy-Consumption-Modelling-Solution-Team-Farzi-Data-Scientists}
